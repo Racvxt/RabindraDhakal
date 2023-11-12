@@ -706,8 +706,19 @@ h1, h2, h3{
     
     <p class="hero"></p>
     <script>
+	
         let notesObj;
         showcomment()
+	  document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+    var targetElement = e.target;
+
+    // Check if the right-clicked element is an image
+    if (targetElement.tagName === 'IMG') {
+      alert('Right-clicking on images is disabled on this site.');
+    }
+  });
+
 
         let a=document.getElementById("comment");
         a.addEventListener("click",function(e){
