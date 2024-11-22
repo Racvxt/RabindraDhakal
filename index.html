@@ -797,6 +797,18 @@ h1, h2, h3{
         let url1="https://api.github.com/users";
         let ajjj={"Rabindra","Kabita"};
         console.log(typeof(ajjj))
+	    
+	document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("form");
+  const submitButton = form.querySelector(".btn-submit");
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault(); // Prevent the form from actually submitting (for demonstration)
+    submitButton.value = "Submitted"; // Change the button text
+    submitButton.disabled = true; // Disable the button to prevent multiple submissions
+  });
+});
+
 
 
 
