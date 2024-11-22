@@ -22,7 +22,28 @@ body{
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+	
 }
+input, textarea {
+  user-select: text; /* Allow text selection */
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  pointer-events: auto; /* Ensure interactivity for inputs */
+}
+
+/* Disable image and video dragging */
+img, video {
+  pointer-events: none; /* Disable interaction with media elements */
+  user-drag: none; /* Prevent dragging */
+  -webkit-user-drag: none;	
+}
+
+/* Disable pointer events for images and videos */
+img, video {
+  pointer-events: none; /* Prevent interactions like right-clicking */
+}
+	
 
 *{
     box-sizing: border-box;
